@@ -1,0 +1,31 @@
+<h1>Listing nav_entries</h1>
+
+<table>
+  <tr>
+    <th>System</th>
+    <th>Parent</th>
+    <th>Seq</th>
+    <th>Content</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nav_entries.each do |nav_entry| %>
+  <tr>
+    <td><%= nav_entry.system_id %></td>
+    <td><%= nav_entry.parent_id %></td>
+    <td><%= nav_entry.seq %></td>
+    <td><%= nav_entry.content %></td>
+    <td><%= nav_entry.description %></td>
+    <td><%= link_to 'Show', nav_entry %></td>
+    <td><%= link_to 'Edit', edit_nav_entry_path(nav_entry) %></td>
+    <td><%= link_to 'Destroy', nav_entry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nav entry', new_nav_entry_path %>

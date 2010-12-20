@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  system_id: 1
+  nav_entry_id: 1
+  seq: 1
+  content: MyString
+  description: MyString
+
+two:
+  system_id: 1
+  nav_entry_id: 1
+  seq: 1
+  content: MyString
+  description: MyString

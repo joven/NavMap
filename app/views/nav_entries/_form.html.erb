@@ -1,0 +1,10 @@
+<%= semantic_form_for(@nav_entry) do |f| %>
+  <% f.inputs  do %>
+    <%= f.input :system %>
+    <%= f.input :parent, :collection => NavEntry.all.collect{|n| [n.content, n.id]} %>
+    <%= f.input :seq %>
+    <%= f.input :content %>
+    <%= f.input :description %>
+  <% end%>
+  <%= f.buttons %>
+<% end %>

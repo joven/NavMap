@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>System:</b>
+  <%= @nav_entry.system_id %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= @nav_entry.parent_id %>
+</p>
+
+<p>
+  <b>Seq:</b>
+  <%= @nav_entry.seq %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @nav_entry.content %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @nav_entry.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_nav_entry_path(@nav_entry) %> |
+<%= link_to 'Back', nav_entries_path %>
