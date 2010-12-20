@@ -6,6 +6,9 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
+gem 'formtastic', '~>1.1.0'
+gem 'validation_reflection', '1.0.0'
+gem 'simple-navigation'
 
 # Use unicorn as the web server
 # gem 'unicorn'
