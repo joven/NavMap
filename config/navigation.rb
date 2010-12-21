@@ -63,7 +63,6 @@ SimpleNavigation::Configuration.run do |navigation|
     # primary.auto_highlight = false
     
     primary.item :key_1, 'Systems', systems_path
-    primary.item :key_2, 'Nav Entries', nav_entries_path
 
   end
 

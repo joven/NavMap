@@ -9,8 +9,10 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<%= render_navigation %>  
-<%= yield %>
+  <div id="top_navigation">
+    <%= render_navigation %>
+  </div>
+  <%= yield %>
 
 </body>
 </html>

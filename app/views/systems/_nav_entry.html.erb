@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <% (indent*5).downto(0) do %>&nbsp;<% end %>
+    <%= link_to nav_entry.content, edit_system_nav_entry_path(@system, nav_entry) %>
+  </td>
+  <td><%= link_to 'New Sub-entry', 
+    new_system_nav_entry_path(@system, :parent_id => nav_entry) %></td>
+  <td><%= nav_entry.description %></td>
+</tr>
+<%= render :partial => "nav_entry", :collection => nav_entry.children, 
+  :locals => { :indent => indent + 1 } %>

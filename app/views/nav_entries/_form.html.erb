@@ -1,7 +1,8 @@
-<%= semantic_form_for(@nav_entry) do |f| %>
+<%= semantic_form_for [@system, @nav_entry] do |f| %>
   <% f.inputs  do %>
-    <%= f.input :system %>
-    <%= f.input :parent, :collection => NavEntry.all.collect{|n| [n.content, n.id]} %>
+    <%= f.input :system_id, :as => :hidden %>
+    <%= f.input :system, :input_html => { :disabled => true } %>
+    <%= f.input :parent, :collection => @parents %>
     <%= f.input :seq %>
     <%= f.input :content %>
     <%= f.input :description %>

@@ -1,15 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @system.name %>
-</p>
-
-<p>
-  <b>Version:</b>
-  <%= @system.version %>
-</p>
-
+<% if notice %><p id="notice"><%= notice %></p><% end %>
 
 <%= link_to 'Edit', edit_system_path(@system) %> |
 <%= link_to 'Back', systems_path %>
+
+<h1><%= @system.name %></h1>
+<h3>Version: <%= @system.version %></h3>
+
+<p><%= link_to 'New Root Nav Entry', new_system_nav_entry_path(@system) %></p>
+
+<table>
+  <%= render :partial => "nav_entry", :collection => @system.roots, :locals => { :indent => 0 } %>
+</table>

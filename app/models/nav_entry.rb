@@ -7,7 +7,7 @@ class NavEntry < ActiveRecord::Base
 	
 	validates :system, :presence => true
 	validates :seq, :presence => true, 
-		:uniqueness => {:scope => :parent_id}
+    :uniqueness => {:scope => [:system_id, :parent_id]}
 	validates :content, :presence => true, 
-		:uniqueness => {:scope => :parent_id}
+    :uniqueness => {:scope => [:system_id, :parent_id]}
 end
